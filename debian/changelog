@@ -1,0 +1,5 @@
+electron (1.6.1-0) unstable; urgency=low
+
+  * Debian packaging of the npm electron v1.6.1 package
+
+ -- Team Kano <dev@kano.me>  Mon, 27 Mar 2017 16:35:00 +0000

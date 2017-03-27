@@ -1,0 +1,8 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: electron
+Upstream-Contact: Kano developers <dev@kano.me>
+Source: https://github.com/KanoComputing/rpi-electron
+
+Files: *
+Copyright: see LICENSE file
+License: see LICENSE file

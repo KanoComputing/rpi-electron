@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	npm install --global --prefix debian/rpi-electron/usr/ electron@1.6.1
