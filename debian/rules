@@ -1,7 +1,13 @@
 #!/usr/bin/make -f
 
+
+# Get the package version from the changelog file.
+DEB_UPSTREAM_VERSION ?= $(shell dpkg-parsechangelog \
+                          | sed -rne 's/^Version: ([0-9.]+)[-+].*$$/\1/p')
+
+
 %:
 	dh $@
 
 override_dh_auto_install:
-	npm install --global --prefix debian/electron/usr/ electron@1.6.1
+	npm install --global --prefix debian/electron/usr/ electron@${DEB_UPSTREAM_VERSION}
