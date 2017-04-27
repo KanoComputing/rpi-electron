@@ -10,4 +10,4 @@ DEB_UPSTREAM_VERSION ?= $(shell dpkg-parsechangelog \
 	dh $@
 
 override_dh_auto_install:
-	npm install --global --prefix debian/electron/usr/ electron@${DEB_UPSTREAM_VERSION}
+	npm install --global --prefix debian/electron/usr/local/ electron@${DEB_UPSTREAM_VERSION}
