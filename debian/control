@@ -5,12 +5,14 @@ Priority: optional
 Standards-Version: 3.9.4
 Build-Depends:
     debhelper (>=9.0.0),
-    nodejs
+    npm (>=1.4.21),
+    nodejs (>=8.11)
 
 Package: electron
 Architecture: all
 Depends:
     ${misc:Depends},
-    nodejs
+    nodejs (>=8.11),
+    libgconf-2-4 (>=3.2.6-4)
 Description: Debian packaging of Electron
  Debian packaging of the Electron project (https://github.com/electron/electron) created by the Electron organisation (https://electron.atom.io/) Foundation and their contributors.
