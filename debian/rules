@@ -14,3 +14,11 @@ override_dh_auto_install:
 	npm install --global --prefix debian/electron/usr/local/ electron@${DEB_UPSTREAM_VERSION}
 
 override_dh_usrlocal:
+
+override_dh_fixperms:
+	dh_fixperms
+	# The binary is a symlink to a file in /usr/share whose permissions get
+	# modified when running dh_fixperms so restore the executable bit on the
+	# files.
+	-find debian/electron/usr/bin -type l -exec chmod +x `readlink -f {}` \;
+	-find debian/electron/usr/local/bin -type l -exec chmod +x `readlink -f {}` \;
